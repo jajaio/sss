@@ -14,7 +14,7 @@ What Is planned to happen next release
 ## What's next:
 There is no way this is complete. But we can improve it in many ways, here's a list:
 * Give a link to the source code here.
-* ~Make the whole thing more graphicly appealing.~ **Started with main
+* ~~Make the whole thing more graphicly appealing.~~ **Started with main
   UI**
 * Make the program feel less "Whitman stiff"
 * ~~FAQ to curb the inevitable influx of tickets with answers for common troubles.~~ **view top**
