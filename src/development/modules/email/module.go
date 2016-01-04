@@ -47,12 +47,12 @@ func Startup() {
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
 	fmt.Println(c.B1 + "What is the priority of the ticket?")
-	fmt.Println(c.B01 + "SkilBux will be taken as a refundable deposit assuming:\nYou have checked the FAQ first\nHonestly prioritize your ticket.")
+	fmt.Println(c.B01 + "You will be banned from using S3 if:\nYou have failed to check the FAQ first\nDo not honestly prioritize your ticket.")
 	fmt.Println()
-	fmt.Println(c.G + "Low     " + c.B01 + " | §0")
-	fmt.Println(c.Y + "Medium  " + c.B01 + " | §2")
-	fmt.Println(c.R + "High    " + c.B01 + " | §5")
-	fmt.Println(c.V + "Urgent  " + c.B01 + " | §10")
+	fmt.Println(c.G + "Low     " + c.B01 + " | No ban")
+	fmt.Println(c.Y + "Medium  " + c.B01 + " | One day ban")
+	fmt.Println(c.R + "High    " + c.B01 + " | Two day ban")
+	fmt.Println(c.V + "Urgent  " + c.B01 + " | Three to five day ban")
 	/////
 	for done == false {
 		priority, _ := i.Input("email", "sss")

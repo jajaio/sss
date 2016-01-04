@@ -20,15 +20,14 @@ func main() {
 		case "a":
 			e.Startup()
 			done = true
-		//case "b":
-		/*
+		case "b":
+
 			fmt.Println(c.CL + c.B1 + "Copy and paste this into your browser")
 			fmt.Println()
-			fmt.Println(c.O+"https://sss.skilstak.io")
+			fmt.Println(c.O + "https://sss.surge.sh")
 			fmt.Println()
 			fmt.Println()
 			done = true
-		*/
 		case "c":
 			done = true
 		default:
