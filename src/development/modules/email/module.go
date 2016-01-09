@@ -26,7 +26,7 @@ func stringInSlice(a string, list []string) bool {
 	return false
 }
 
-const Version string = c.V + "V S-1.0.0"
+const Version string = c.V + "V S-1.1.1"
 
 //Version is exported to the UITest module.
 func Startup() {
@@ -47,7 +47,7 @@ func Startup() {
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
 	fmt.Println(c.B1 + "What is the priority of the ticket?")
-	fmt.Println(c.B01 + "You will be banned from using S3 if:\nYou have failed to check the FAQ first\nDo not honestly prioritize your ticket.")
+	fmt.Println(c.B01 + "You will be banned from using S3 if:\n⦿    You have failed to check the FAQ first.\n⦿    Do not honestly prioritize your ticket.")
 	fmt.Println()
 	fmt.Println(c.G + "Low     " + c.B01 + " | No ban")
 	fmt.Println(c.Y + "Medium  " + c.B01 + " | One day ban")
@@ -58,9 +58,9 @@ func Startup() {
 		priority, _ := i.Input("email", "sss")
 		priority = strings.ToLower(priority)
 		switch priority {
-		case "low":
-			low()
-		case "urgent", "medium", "high":
+		case "low", "l", "lo":
+			low(user)
+		case "urgent", "u", "medium", "med", "m", "high", "hi", "h":
 			nonUrgent(user, priority)
 			done = true
 		case "devurgent": /*Still doing this, give us a while*/
@@ -87,16 +87,16 @@ func nonUrgent(user string, priority string) {
 	for details == "" {
 		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 		s.Spacer(2)
-		fmt.Println(c.B1 + "Give a breif description of your problem")
+		fmt.Println(c.B1 + "Give a brief description of your problem:")
 		details, _ = i.Input("email", "sss")
 	}
 	/////
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
-	fmt.Println(c.G + "Whats the best way someone can contact you for help on this problem?")
-	fmt.Println(c.R + "{A} " + c.B01 + "E-MAIL me at an email address")
+	fmt.Println(c.G + "What is the best way someone can contact you for help on this problem?")
+	fmt.Println(c.R + "{A} " + c.B01 + "email me at an email address")
 	fmt.Println(c.R + "{B} " + c.B00 + "TALK to me on the skilstak.sh server @ " + user + ".")
-	fmt.Println(c.R + "{C} " + c.B01 + "Message me via SLACK (must provide username)")
+	fmt.Println(c.R + "{C} " + c.B01 + "Message me via Slack (must provide Slack ID)")
 
 	newcontact := ""
 	done = false
@@ -105,7 +105,7 @@ func nonUrgent(user string, priority string) {
 		contact, _ := i.Input("email", "sss")
 		switch contact {
 		case "A", "a":
-			fmt.Println(c.CL + c.B1 + "What is the email address you'd like to use?")
+			fmt.Println(c.CL + c.B1 + "What is the email address you would like to use?")
 			studentemail, _ := i.Input("email", "sss")
 			newcontact = "e-mail me at " + studentemail + "."
 			done = true
@@ -113,7 +113,7 @@ func nonUrgent(user string, priority string) {
 			newcontact = "TALK to me on the skilstak.sh server @ " + user + "."
 			done = true
 		case "C", "c":
-			fmt.Println(c.CL + c.B1 + "What is the SLACK ID you'd like to use?")
+			fmt.Println(c.CL + c.B1 + "What is the SLACK ID you would like to use?")
 			studentemail, _ := i.Input("email", "sss")
 			newcontact = "slack me at " + studentemail + "."
 			done = true
@@ -152,34 +152,34 @@ func devurgent(user string) {
 func listForums() {
 	fmt.Println(c.CL + c.B2 + "Hmm... here are all the forums:")
 	s.Spacer(1)
-	fmt.Println(c.B01 + "Bux")
-	fmt.Println(c.B1 + "Camp")
-	fmt.Println(c.B01 + "Ehacking")
-	fmt.Println(c.B1 + "FUNdamentals")
-	fmt.Println(c.B01 + "Game")
-	fmt.Println(c.B1 + "Java")
-	fmt.Println(c.B01 + "Js")
-	fmt.Println(c.B1 + "Linux π")
-	fmt.Println(c.B01 + "Code && play")
-	fmt.Println(c.B1 + "Code && prep")
-	fmt.Println(c.B01 + "Python")
-	fmt.Println(c.B1 + "Web")
-	fmt.Println(c.B01 + "GOlang")
-	fmt.Println(c.B1 + "Linux/Unix")
-	fmt.Println(c.B01 + "Pro")
-	fmt.Println(c.B1 + "S.W.A.T.")
+	fmt.Println(c.B00 + "⦿" + c.B01 + " Bux")
+	fmt.Println(c.B00 + "⦿" + c.B1 + " Camp")
+	fmt.Println(c.B00 + "⦿" + c.B01 + " Ehacking")
+	fmt.Println(c.B00 + "⦿" + c.B1 + " FUNdamentals")
+	fmt.Println(c.B00 + "⦿ " + c.B01 + "Game")
+	fmt.Println(c.B00 + "⦿ " + c.B1 + "Java")
+	fmt.Println(c.B00 + "⦿ " + c.B01 + "Js")
+	fmt.Println(c.B00 + "⦿ " + c.B1 + "Linux π")
+	fmt.Println(c.B00 + "⦿ " + c.B01 + "Code && play")
+	fmt.Println(c.B00 + "⦿ " + c.B1 + "Code && prep")
+	fmt.Println(c.B00 + "⦿ " + c.B01 + "Python")
+	fmt.Println(c.B00 + "⦿ " + c.B1 + "Web")
+	fmt.Println(c.B00 + "⦿ " + c.B01 + "GOlang")
+	fmt.Println(c.B00 + "⦿ " + c.B1 + "Linux/Unix")
+	fmt.Println(c.B00 + "⦿ " + c.B01 + "Pro")
 	s.Go(1)
 }
-func low() {
-	fmt.Println(c.CL + c.B2 + "Ok. To prevent spam on easy items, we ask that you SLACK for help in the SLACK forums.")
+func low(user string) {
+	fmt.Println(c.CL + c.B2 + "Ok. To prevent spam on easy items, we ask that you Slack for help in the forums.")
 	fmt.Println(c.B1 + "Is that OK?")
-	fmt.Println()
+	fmt.Println(c.R + "yes\nno")
 	openBrowser := ""
 	done := false
 	otherDone := false
 	for done == false {
 		openBrowser, _ = i.Input("email", "sss")
-		if openBrowser == "yes" {
+		switch openBrowser {
+		case "ok", "sure", "yes":
 			fmt.Println(c.CL + c.B2 + "Ok, before we do, what does your question pretain to?")
 			fmt.Println(c.B1 + "If you don't know, just type \"help\"")
 			for otherDone == false {
@@ -272,13 +272,12 @@ func low() {
 				}
 				//the switch statment is now done
 			}
-			s.Bye()
 			//the encasing for loop is done
 			done = true
-		} else /*Stupid long first if is done*/ if openBrowser == "no" {
-			fmt.Println(c.B2 + "Ok then. Sorry we were not of any help...")
+		case /*Stupid long first if is done*/ "no":
+			nonUrgent(user, "low")
 			s.Bye()
-		} else {
+		default:
 			fmt.Println(c.B2 + "Yeah no... I don't know what you just said")
 		}
 	}
