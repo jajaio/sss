@@ -24,7 +24,7 @@ func Output() {
 	fmt.Println(c.B3 + "╚═════════════════════════════════════════════════════╝")
 	fmt.Println()
 	fmt.Println(c.M + "How may we help you today?")
-	fmt.Println(c.R + "[A]" + c.B + " Get programming help!")
+	fmt.Println(c.R + "[A]" + c.B + " I need programming help!")
 	fmt.Println(c.R + "[B]" + c.B + " Check the FAQ.")
 	fmt.Println(c.R + "[C]" + c.B + " Just stoppin' by.")
 }
