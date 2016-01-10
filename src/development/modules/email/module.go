@@ -44,15 +44,7 @@ func Startup() {
 		s.Bye()
 	}
 	/////Declaring priority
-	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
-	s.Spacer(2)
-	fmt.Println(c.B1 + "What is the priority of the ticket?")
-	fmt.Println(c.B01 + "You will be banned from using S3 if:\n⦿    You have failed to check the FAQ first.\n⦿    Do not honestly prioritize your ticket.")
-	fmt.Println()
-	fmt.Println(c.G + "Low     " + c.B01 + " | No ban")
-	fmt.Println(c.Y + "Medium  " + c.B01 + " | One day ban")
-	fmt.Println(c.R + "High    " + c.B01 + " | Two day ban")
-	fmt.Println(c.V + "Urgent  " + c.B01 + " | Three to five day ban")
+	ui.One()
 	/////
 	for done == false {
 		priority, _ := i.Input("email", "sss")
@@ -134,13 +126,6 @@ func nonUrgent(user string, priority string) {
 	s.QuitAtError(err)
 	s.Go(0)
 	fmt.Println(c.B3 + "Sent! Help is on its way!")
-	/*<<<<<<< HEAD
-	  	id.WriteUUID("listOfUUID.txt", uuid)
-	  =======
-	  	newUuid := byte(int(uuid) + 49)
-	  	id.WriteUUID("listOfUUID.txt", []byte{newUuid})
-	  >>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
-	*/
 }
 
 func devurgent(user string) {

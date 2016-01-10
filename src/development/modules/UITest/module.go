@@ -29,7 +29,7 @@ func Output() {
 	fmt.Println(c.R + "[C]" + c.B + " Just stoppin' by.")
 }
 
-func one() {
+func One() {
 	fmt.Println(c.B3 + "╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
 	fmt.Println(c.B3 + "║ " + c.B00 + "What is the priority of the ticket? You will be banned to prevent spamming." + c.B3 + "                              ║")
 	fmt.Println(c.B3 + "║ " + c.B00 + "You will be banned from S3 if you have failed to check the FAQ or do not honestly prioritize the ticket." + c.B3 + " ║")
