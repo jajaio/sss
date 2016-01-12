@@ -14,10 +14,10 @@ func Output() {
 	fmt.Println(c.B3 + "║ " + c.O + "This is run by the following modules:               " + c.B3 + "║")
 	fmt.Println(c.B3 + "║                                                     ║")
 	fmt.Println(c.B3 + "║ " + c.V + "SSS Main  |  " + c.V + "V S-2.0.2                              " + c.B3 + "║")
-	fmt.Println(c.B3 + "║ " + c.V + "SSS Email |  " + e.Version + "                              " + c.B3 + "║")
-	fmt.Println(c.B3 + "║ " + c.V + "SSS UUID  |  " + id.Version + "                              " + c.B3 + "║")
-	fmt.Println(c.B3 + "║ " + c.V + "SSS UI    |  " + version + "                              " + c.B3 + "║")
-	fmt.Println(c.B3 + "║ " + c.V + "SSS Ban   |  " + ban.Version + "                              " + c.B3 + "║")
+	fmt.Println(c.B3 + "║ " + c.V + "SSS Email |  " + c.V + "S-1.0.0" + "                                " + c.B3 + "║")
+	fmt.Println(c.B3 + "║ " + c.V + "SSS UUID  |  " + c.V + "S-1.0.0" + "                                " + c.B3 + "║")
+	fmt.Println(c.B3 + "║ " + c.V + "SSS UI    |  " + c.V + "S-1.0.0" + "                                " + c.B3 + "║")
+	fmt.Println(c.B3 + "║ " + c.V + "SSS Ban   |  " + c.V + "S-1.0.0" + "                                " + c.B3 + "║")
 	fmt.Println(c.B3 + "╚═════════════════════════════════════════════════════╝")
 	fmt.Println()
 	fmt.Println(c.M + "How may we help you today?")
@@ -27,6 +27,7 @@ func Output() {
 }
 
 func One() {
+	fmt.Print(c.Clear)
 	fmt.Println(c.B3 + "╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
 	fmt.Println(c.B3 + "║ " + c.B00 + "What is the priority of the ticket? You will be banned to prevent spamming." + c.B3 + "                              ║")
 	fmt.Println(c.B3 + "║ " + c.B00 + "You will be banned from S3 if you have failed to check the FAQ or do not honestly prioritize the ticket." + c.B3 + " ║")
@@ -36,4 +37,5 @@ func One() {
 	fmt.Println(c.B3 + "║ " + c.O + "High Priority   " + c.X + "┃┃ " + c.B1 + " Two day ban" + c.X + "           ┃┃  " + c.B1 + "Example: I'm presenting to my class and it broke!" + c.B3 + "          ║")
 	fmt.Println(c.B3 + "║ " + c.R + "Urgent Priority " + c.X + "┃┃ " + c.B1 + " Three to Five day ban" + c.X + " ┃┃  " + c.B1 + "Example: The server blew up!" + c.B3 + "                               ║")
 	fmt.Println(c.B3 + "╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
+	fmt.Println()
 }
